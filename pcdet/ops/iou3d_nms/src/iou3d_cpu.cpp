@@ -64,7 +64,7 @@ inline float cross(const Point &p1, const Point &p2, const Point &p0){
     return (p1.x - p0.x) * (p2.y - p0.y) - (p2.x - p0.x) * (p1.y - p0.y);
 }
 
-inline int check_rect_cross(const Point &p1, const Point &p2, const Point &q1, const Point &q2){
+inline static int check_rect_cross(const Point &p1, const Point &p2, const Point &q1, const Point &q2){
     int ret = min(p1.x,p2.x) <= max(q1.x,q2.x)  &&
               min(q1.x,q2.x) <= max(p1.x,p2.x) &&
               min(p1.y,p2.y) <= max(q1.y,q2.y) &&
